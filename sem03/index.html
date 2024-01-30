@@ -66,9 +66,7 @@
         document.addEventListener('click', (e) => {
             const targetEl = e.target;
             let outputString = 'Класс "super_element" ';
-            targetEl.classList.contains('super_element') ?
-                outputString += 'присутствует ' :
-                outputString += 'отсутствует ';
+            targetEl.classList.contains('super_element') ? outputString += 'присутствует ' : outputString += 'отсутствует ';
             outputString += `в элементе ${targetEl.tagName.toLowerCase()}`;
             console.log(outputString);
         }, false);
@@ -95,7 +93,7 @@
 
         // Это происходит потому, что слушатель по умолчанию работает в фазе всплытия, т.е. когда событие проходит от потомков к предкам.
         // Чтобы изменить такое поведение нужно в слушателя событий из 3 задания добавить аргумент true, который укажет, что
-        // слушатель должен сработать на фазе захвата.
+        // слушатель должен сработать в фазе захвата.
 
         // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
         const liEls = document.querySelectorAll('li');
