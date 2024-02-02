@@ -69,6 +69,8 @@
         const inputEls = document.querySelectorAll('.form-control');
 
         formEl.addEventListener('submit', (e) => {
+            // e.preventDefault();
+            // inputEls.forEach(checkInput);
             inputEls.forEach(element => {
                 if (!checkInput(element)) {
                     e.preventDefault();
