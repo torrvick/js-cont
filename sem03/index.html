@@ -66,7 +66,7 @@
         document.addEventListener('click', (e) => {
             const targetEl = e.target;
             let outputString = 'Класс "super_element" ';
-            targetEl.classList.contains('super_element') ? outputString += 'присутствует ' : outputString += 'отсутствует ';
+            outputString += targetEl.classList.contains('super_element') ? 'присутствует ' : 'отсутствует ';
             outputString += `в элементе ${targetEl.tagName.toLowerCase()}`;
             console.log(outputString);
         }, false);
