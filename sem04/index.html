@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javasript: Продолжение. Семинар 4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -86,7 +87,6 @@
 
         const checkInput = (element) => {
             const isValid = element.value.trim() !== '';
-            element.style.border = isValid ? null : '3px solid red';
             element.classList.toggle('error', !isValid);
             return isValid;
         };
