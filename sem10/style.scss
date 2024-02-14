@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    // box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -19,7 +18,6 @@ body {
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
-    // justify-content: space-between;
 }
 
 .content {
@@ -52,7 +50,6 @@ body {
 
     &-info {
         flex-grow: 1;
-        // text-align: start;
         display: flex;
         flex-direction: column;
     }
