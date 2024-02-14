@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f1efef;
+  font-family: "Montserrat", sans-serif;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.content {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.recipe {
+  box-sizing: border-box;
+  padding: 10px 16px;
+  flex: 1 1 350px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.recipe-title {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.recipe-img {
+  display: block;
+  width: 40%;
+  border-radius: 10px;
+  margin-right: 16px;
+}
+.recipe-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.recipe-content {
+  display: flex;
+}
+.recipe-prop {
+  padding-bottom: 5px;
+}
+.recipe-tags {
+  margin-top: auto;
+  text-align: end;
+}
+.recipe-tags a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #808080;
+  padding: 0 5px;
+  border: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.recipe-tags :hover {
+  background-color: #f7f7f7;
+}
+.recipe-prop-name {
+  font-weight: 700;
+}
+.recipe:hover {
+  box-shadow: 0px 0px 8px 1px rgba(175, 175, 175, 0.8705882353);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
