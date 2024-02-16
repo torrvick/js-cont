@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+* a {
+  text-decoration: none;
+}
+* a:visited {
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.center {
+  max-width: 1172px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 95px;
+}
+.products-list {
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 30px);
+}
+.products-list-item {
+  background-color: #f8f8f8;
+  position: relative;
+}
+.products-list-item .item-link {
+  text-decoration: none;
+}
+.products-list-item img {
+  width: 100%;
+}
+.products-list-item .add-box {
+  position: absolute;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  top: 30%;
+  pointer-events: none;
+}
+.products-list-item .add-btn {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid #fff;
+  padding: 11px 16px 11px 13px;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  pointer-events: all;
+}
+.products-list-item .add-btn:hover {
+  box-shadow: 0px 0px 10px 0px #fff;
+}
+.products-list-item .spec {
+  padding: 25px 28px 20px 18px;
+}
+.products-list-item .spec .name {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #5d5d5d;
+  padding-bottom: 13px;
+}
+.products-list-item .spec .desc {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #5d5d5d;
+  padding-bottom: 18px;
+}
+.products-list-item .spec .price {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #F16D7F;
+}
+.products-list-item:hover img {
+  filter: brightness(0.3);
+}
+.products-list-item:hover .add-box {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,106 @@
+@import "vars";
+@import "mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    a {
+        text-decoration: none;
+        &:visited {
+            color: inherit;
+        }
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.center {
+    max-width: calc($contentWidth + $contentPadding * 2);
+    margin: 0 auto;
+    padding: 0 $contentPadding;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 95px;
+    &-list {
+        padding-top: 32px;
+        display: grid;
+        // grid-template-columns: repeat(3, minmax(auto, max-content));
+        grid-template-columns: repeat(3, 1fr);
+        // gap: clamp(16px, calc(16px + (30 - 16) * (100vw - 1024px) / (1180 - 1024)), 30px);
+        gap: clamp(16px, 2.5vw, 30px);
+        &-item {
+            background-color: #f8f8f8;
+            position: relative;
+            .item-link {
+                text-decoration: none;
+            }
+            img {
+                width: 100%;
+            }
+            .add-box {
+                position: absolute;
+                width: 100%;
+                display: none;
+                justify-content: center;
+                top: 30%;
+                pointer-events: none;
+            }
+            .add-btn {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                border: 1px solid #fff;
+                padding: 11px 16px 11px 13px;
+                text-decoration: none;
+                @include font_sz_w(14px, 400);
+                color: #fff;
+                pointer-events: all;
+                &:hover {
+                    box-shadow: 0px 0px 10px 0px #fff;
+                }
+            }
+
+            .spec {
+                padding: 25px 28px 20px 18px;
+                .name {
+                    @include font_sz_w(13px, 400);
+                    color: #5d5d5d;
+                    padding-bottom: 13px;
+                }
+                .desc {
+                    @include font_sz_w(14px, 300);
+                    color: #5d5d5d;
+                    padding-bottom: 18px;
+                }
+                .price {
+                    @include font_sz_w(16px, 400);
+                    color: $colorPink;
+                }
+            }
+            &:hover {
+                img {
+                    filter: brightness(0.3);
+                }
+                .add-box {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

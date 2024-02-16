@@ -1,0 +1,18 @@
+@mixin flex_jc_ai($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin font_sz_w($size, $weight) {
+    font-family: "Lato", sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin filter-colorize($color) {
+    color: $color;
+    path {
+        fill: $color;
+    }
+}
