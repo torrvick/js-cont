@@ -1,0 +1,215 @@
+@media (max-width: 767px) {
+    .header {
+        &__content {
+            padding: 0 calc($contentPadding * 2);
+        }
+    }
+
+    .banner {
+        margin-bottom: 20px;
+        .text {
+            :nth-child(1) {
+                @include font_sz_w(clamp(38px, 6vw, 44px), 900);
+            }
+            :nth-child(2) {
+                @include font_sz_w(clamp(20px, 3.5vw, 24px), 700);
+            }
+        }
+    }
+
+    .offer {
+        margin-bottom: 154px;
+    }
+
+    .products {
+        margin-bottom: 64px;
+        &-list {
+            grid-template-columns: repeat(2, minmax(auto, max-content));
+            gap: 16px;
+        }
+    }
+
+    .feature {
+        padding: 48px 0 64px;
+        &__content {
+            flex-direction: column;
+            gap: 48px;
+        }
+    }
+
+    .cart {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        &__product-box {
+            margin-top: 59px;
+            margin-bottom: 64px;
+        }
+        &__list {
+            margin-bottom: 62px;
+        }
+        &__buttons {
+            justify-content: center;
+            gap: 48px;
+        }
+        &__order-box {
+            width: 100%;
+            margin-bottom: 128px;
+        }
+    }
+
+    .subscribe {
+        padding-bottom: 140px;
+        padding-top: 64px;
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            &-right {
+                width: 100%;
+                max-width: 360px;
+                .subcontainer {
+                    :nth-child(2) {
+                        padding-bottom: 27px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        &__content {
+            padding: 0 calc($contentPadding * 2);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        &__content {
+            padding: 0 $contentPadding;
+            &-right {
+                #profile-btn {
+                    display: none;
+                }
+                #cart-btn {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .banner {
+        margin-bottom: 64px;
+        &__content {
+            @include flex_jc_ai(center, center);
+            &-left {
+                display: none;
+            }
+            &-right {
+                height: 363px;
+                padding: 0 $contentPadding;
+                .text {
+                    :nth-child(1) {
+                        @include font_sz_w(38px, 900);
+                    }
+                    :nth-child(2) {
+                        @include font_sz_w(20px, 700);
+                    }
+                }
+            }
+        }
+    }
+
+    .offer {
+        margin-bottom: 64px;
+        grid-template-columns: repeat(1, minmax(auto, max-content));
+        justify-content: center;
+        gap: 32px;
+        .cell,
+        .bigcell {
+            grid-row: auto;
+            grid-column: 1 / -1;
+        }
+        .bigcell img {
+            height: 111px;
+            object-fit: cover;
+        }
+    }
+
+    .products {
+        margin-bottom: 96px;
+        &-list {
+            grid-template-columns: repeat(1, minmax(auto, max-content));
+        }
+    }
+
+    .feature {
+        padding: 46px 0 81px;
+        &__content {
+            flex-direction: column;
+            gap: 48px;
+        }
+    }
+
+    .cart {
+        &__product-box {
+            margin-top: 39px;
+            margin-bottom: 48px;
+        }
+        &__list {
+            margin-bottom: 30px;
+            gap: 32px;
+        }
+        &__img {
+            max-width: 143px;
+            height: 188px;
+        }
+        &__dsc {
+            padding: 14px 0px 0px 17px;
+        }
+        &__title {
+            @include font_sz_w(16px, 400);
+            margin-bottom: 26px;
+        }
+        &__text {
+            @include font_sz_w(14px, 400);
+            color: #575757;
+            margin-bottom: 4px;
+        }
+        &__item-quantity {
+            width: 34px;
+            @include font_sz_w(14px, 400);
+        }
+        &__buttons {
+            justify-content: space-between;
+            gap: 9px;
+        }
+        &__btn {
+            padding: 1rem 1rem;
+            @include font_sz_w(14px, 300);
+            text-transform: none;
+            width: 50%;
+        }
+        &__del-btn {
+            top: 15px;
+            right: 15px;
+            & svg {
+                width: 10px;
+            }
+        }
+    }
+
+    .subscribe {
+        padding-bottom: 109px;
+    }
+
+    .bottom {
+        padding-top: 43px;
+        padding-bottom: 9px;
+        &__content {
+            flex-direction: column-reverse;
+            padding: 0 calc($contentPadding * 2);
+        }
+    }
+}
