@@ -364,8 +364,9 @@ main {
 }
 
 .cart {
+    padding-bottom: 80px;
+    padding-top: 56px;
     &__heading {
-        margin-top: 56px;
         margin-bottom: 42px;
         @include font_sz_w(30px, 400);
         text-align: center;
