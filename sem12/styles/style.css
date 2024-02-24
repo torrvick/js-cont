@@ -483,7 +483,7 @@ main {
 .subscribe {
   padding-bottom: 156px;
   padding-top: 97px;
-  background-image: url("/assets/img/subscribe_bg.png");
+  background-image: url("../assets/img/subscribe_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
